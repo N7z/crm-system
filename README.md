@@ -2,6 +2,7 @@
 
 Sistema de CRM desenvolvido em Laravel 12 com suporte a cadastro e gestão de clientes, fornecedores, produtos, vendas e relatórios. Utiliza Livewire Volt para interfaces reativas.
 
+Live Preview [Ainda não está pronto]: https://crm.paulodev.space/
 ## Funcionalidades
 
 - Autenticação
