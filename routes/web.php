@@ -14,6 +14,10 @@ Route::view('dashboard', 'dashboard')
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
 
+    Volt::route('clients', 'clients/index')->name('clients.index');
+    Volt::route('clients/create', 'clients/create')->name('clients.create');
+    Volt::route('clients/{client}/edit', 'clients/edit')->name('clients.edit');
+
     Volt::route('settings/profile', 'settings.profile')->name('settings.profile');
     Volt::route('settings/password', 'settings.password')->name('settings.password');
     Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
