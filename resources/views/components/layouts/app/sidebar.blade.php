@@ -13,8 +13,11 @@
 
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')" class="grid">
-                    <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
-                    <flux:navlist.item icon="user" :href="route('clients.index')" :current="request()->routeIs('clients.*')" wire:navigate>{{ __('Clientes') }}</flux:navlist.item>
+                    <flux:navlist.item class="mb-1" icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
+                    <flux:navlist.item class="mb-1" icon="user" :href="route('clients.index')" :current="request()->routeIs('clients.*')" wire:navigate>{{ __('Clientes') }}</flux:navlist.item>
+                    <flux:navlist.item class="mb-1" icon="cube" :href="route('products.index')" :current="request()->routeIs('products.*')" wire:navigate>{{ __('Produtos') }}</flux:navlist.item>
+                    <flux:navlist.item class="mb-1" icon="wrench" :href="route('suppliers.index')" :current="request()->routeIs('suppliers.*')" wire:navigate>{{ __('Fornecedores') }}</flux:navlist.item>
+                    <flux:navlist.item class="mb-1" icon="folder" :href="route('categories.index')" :current="request()->routeIs('categories.*')" wire:navigate>{{ __('Categorias') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 
