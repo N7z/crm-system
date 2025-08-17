@@ -38,9 +38,9 @@ new class extends Component {
         <flux:separator variant="subtle" />
     </div>
 
-    <flux:button class="mb-4" variant="primary" onclick="window.location.href='{{ route('clients.create') }}'">
+    <a href="{{ route('clients.create') }}" wire:navigate><flux:button class="mb-4" variant="primary">
         {{ __('Novo Cliente') }}
-    </flux:button>
+    </flux:button></a>
 
     <div class="overflow-hidden mb-3 rounded-lg border border-zinc-300 dark:border-zinc-700">
         <table class="min-w-full border-collapse">
@@ -85,7 +85,7 @@ new class extends Component {
                         {{ $client->cpf }}
                     </td>
                     <td class="px-4 py-2 border-r border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-200">
-                        <flux:button size="sm" onclick="window.location.href='{{ route('clients.edit', $client) }}'">Editar</flux:button>
+                        <a href="{{ route('clients.edit', $client) }}" wire:navigate><flux:button size="sm">Editar</flux:button></a>
                         <flux:button size="sm" variant="danger" wire:click="confirmDelete({{ $client->id }})">Deletar</flux:button>
                     </td>
                 </tr>

@@ -41,9 +41,6 @@ new class extends Component {
 }; ?>
 
 <div x-data x-init="IMask($refs.phone, { mask: '(00) 00000-0000' }); IMask($refs.cpf, { mask: '000.000.000-00' }); ">
-    <button @click="Toaster.success('Form submitted!')">
-        Submit
-    </button>
     <div class="relative mb-6 w-full">
         <flux:heading size="xl" level="1">{{ __('Editar Cliente') }}</flux:heading>
         <flux:subheading size="lg" class="mb-6">{{ __('Preencha os dados abaixo') }}</flux:subheading>
