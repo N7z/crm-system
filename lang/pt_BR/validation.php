@@ -191,6 +191,7 @@ return [
     */
 
     'attributes' => [
+        'status'    => 'situação',
         'address'   => 'endereço',
         'age'       => 'idade',
         'body'      => 'conteúdo',
