@@ -44,13 +44,6 @@ new class extends Component {
     <div class="relative mb-6 w-full">
         <flux:heading size="xl" level="1">{{ __('Editar Cliente') }}</flux:heading>
         <flux:subheading size="lg" class="mb-6">{{ __('Preencha os dados abaixo') }}</flux:subheading>
-
-        @if(session('success'))
-            <div class="mb-3 bg-green-300 dark:bg-green-700 border border-green-400 dark:border-green-900 dark:text-white px-4 py-2 rounded-lg">
-                {{ session('success') }}
-            </div>
-        @endif
-
         <flux:separator variant="subtle" />
     </div>
 
