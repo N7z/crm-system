@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
@@ -24,5 +25,15 @@ class Product extends Model
 
     public function category() {
         return $this->belongsTo(Category::class);
+    }
+
+    public function getBuyPriceFormattedAttribute()
+    {
+        return 'R$ ' . number_format($this->buy_price, 2, ',', '.');
+    }
+
+    public function getSellPriceFormattedAttribute()
+    {
+        return 'R$ ' . number_format($this->sell_price, 2, ',', '.');
     }
 }
