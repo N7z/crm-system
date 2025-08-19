@@ -30,7 +30,6 @@ new class extends Component {
         $this->description = $product->description;
         $this->buy_price = $product->buy_price_formatted;
         $this->sell_price = $product->sell_price_formatted;
-        $this->image = $product->image;
         $this->quantity = $product->quantity;
         $this->status = $product->status;
     }
