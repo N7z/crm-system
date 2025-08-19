@@ -10,9 +10,9 @@ new class extends Component {
     {
         $validated = $this->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'phone' => 'required|string|max:255',
-            'cnpj' => 'required|string|max:255',
+            'email' => 'nullable|email|max:255',
+            'phone' => 'nullable|string|max:255',
+            'cnpj' => 'nullable|string|max:255',
             'state' => 'nullable|string|max:255',
             'city' => 'nullable|string|max:255',
             'address' => 'nullable|string|max:255',
@@ -36,9 +36,9 @@ new class extends Component {
 
     <form wire:submit.prevent="save" class="space-y-4">
         <flux:input label="Nome" wire:model="name" required />
-        <flux:input label="E-mail" type="email" wire:model="email" required />
-        <flux:input label="Telefone" x-ref="phone" wire:model="phone" placeholder="(00) 00000-0000" required />
-        <flux:input label="CNPJ" x-ref="cnpj" wire:model="cnpj" placeholder="00.000.000/0000-00" required />
+        <flux:input label="E-mail" type="email" wire:model="email" />
+        <flux:input label="Telefone" x-ref="phone" wire:model="phone" placeholder="(00) 00000-0000" />
+        <flux:input label="CNPJ" x-ref="cnpj" wire:model="cnpj" placeholder="00.000.000/0000-00" />
         <flux:input label="Estado" wire:model="state" />
         <flux:input label="Cidade" wire:model="city" />
         <flux:input label="Endereço" wire:model="address" />

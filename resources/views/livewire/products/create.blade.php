@@ -36,7 +36,7 @@ new class extends Component {
             'status' => 'required|in:active,inactive'
         ]);
 
-        $validated['buy_price'] = formatPrice($validated['buy_price']);
+        $validated['buy_price'] = $validated['buy_price'] ? formatPrice($validated['buy_price']) : null;
         $validated['sell_price'] = formatPrice($validated['sell_price']);
 
         if ($this->image) {

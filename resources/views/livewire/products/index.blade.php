@@ -52,6 +52,9 @@ new class extends Component {
                     ID
                 </th>
                 <th class="px-4 py-2 border-r border-zinc-300 dark:border-zinc-700 text-left text-zinc-800 dark:text-zinc-200">
+                    Categoria
+                </th>
+                <th class="px-4 py-2 border-r border-zinc-300 dark:border-zinc-700 text-left text-zinc-800 dark:text-zinc-200">
                     Fornecedor
                 </th>
                 <th class="px-4 py-2 border-r border-zinc-300 dark:border-zinc-700 text-left text-zinc-800 dark:text-zinc-200">
@@ -81,7 +84,10 @@ new class extends Component {
                         {{ $product->id }}
                     </td>
                     <td class="px-4 py-2 border-r border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-200">
-                        {{ $product->supplier->name }}
+                        {{ $product->category?->name }}
+                    </td>
+                    <td class="px-4 py-2 border-r border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-200">
+                        {{ $product->supplier?->name }}
                     </td>
                     <td class="px-4 py-2 border-r border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-200">
                         {{ $product->name }}
